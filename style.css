@@ -29,21 +29,29 @@ nav a:hover{
     border-radius: 5px;
 }
 footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    left: 0;
+    width: 98%;
     padding: 10px;
 }
 .image{
     display: flex;
     justify-content: space-around;
 }
+
+.intro{
+    width: 47%;
+    float: left;
+}
+
 .intro p{
     padding-left: 100px;
     padding-right: 100px;
 }
+
+.form{
+    width: 47%;
+    float: right;
+}
+
 .contact{
     width: 20px;
     height: 20px;
