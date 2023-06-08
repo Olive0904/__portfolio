@@ -1,3 +1,7 @@
+<?php
+$db = mysqli_connect("localhost","root","","myportfolio");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +26,7 @@
                Toenails = MK3,500.00 <br>
                cleaning nails = MK3,000.00  
             </P>
-            <p><a href="pictures.html">Click here</a> to see others who got their nails done</p>
+            <p><a href="pictures.php">Click here</a> to see others who got their nails done</p>
     </center>
 </body>
 </html>

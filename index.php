@@ -1,3 +1,10 @@
+<?php
+$db = mysqli_connect("localhost","root","","myportfolio");
+
+$result = mysqli_query($db, "select * from `contactdetails`");
+$contactdetails = mysqli_fetch_all($result);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +19,10 @@
     <header>
         Olive Nakhaonga
         <nav>
-            <a href="home.html">Home</a> 
-            <a href="projects.html">Projects</a>
-            <a href="skills.html">Skills</a>
+            
+            <a href="index.php">Home</a> 
+            <a href="projects.php">Projects</a>
+            <a href="skills.php">Skills</a>
         </nav>
     </header>
 
@@ -27,22 +35,21 @@
             <h2>Introduction</h2> <br>
             <hr>
             <h4>Bio</h4>
-            <p>My name is Olive Nakhaonga. I'm currently studying ICT at Mzuzu University. 
-                I have done some programming languages in the past 2 years like C and JAVA, i also do graphic design and
-                 web development, and beside all that  I also do manicures and pedicures to clients around mzuzu and 
-                I really enjoy serving my clients
-            </p> <br>
+            <p>My name is Olive Nakhaonga. I'm currently studying ICT at Mzuzu University.<br> 
+                I have done and practised some programming languages<br>
+                 in the past 2 years like C and JAVA, i also do graphic design<br>
+                 and web development, and i am a parttime manicurist and pedicurist.
+            </p>
             <hr>
             <h4>Skills And Experiences</h4>
             <p>
                 I do web Designing, graphic designing, i've done C and JAVA, and i
                 do manicures and pedicures to pass time.
-         
             </p>
         </div>
         <div class="form">
             <h1>Form</h1>
-            <form action="" id="form" onsubmit="validate();">
+            <form action="" id="form">
                 <table>
                     <tr>
                         <td><label for="name" id="fname">First Name:</label></td>
@@ -74,10 +81,10 @@
 
     <footer>
         <h5>Contacts:</h5>
-        <img src="#" alt="" class="contact"> Phone: +265 998 05 28 95 <br>
-        <img src="#" alt="" class="contact"> WhatsApp: +265 882 58 59 30 <br>
-        <img src="#" alt="" class="contact"> Email: olivenakhaonga@gmail.com <br>
-        <img src="#" alt="" class="contact"> Instagram: whimsical_gurll_
+        <img src="#" alt="" class="contact"> Phone: <?php echo $contactdetails[0][2]?><br>
+        <img src="#" alt="" class="contact"> WhatsApp:  <?php echo $contactdetails[2][2]?><br>
+        <img src="#" alt="" class="contact"> Email: <?php echo $contactdetails[3][2]?> <br>
+        <img src="#" alt="" class="contact"> Instagram: <?php echo $contactdetails[1][2]?>
     </footer>
 </body>
 </html>

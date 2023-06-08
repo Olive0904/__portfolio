@@ -1,3 +1,12 @@
+<?php
+$db = mysqli_connect("localhost","root","","myportfolio");
+$result = mysqli_query($db, "select * from `projects`");
+$projects = mysqli_fetch_assoc($result);
+
+$result = mysqli_query($db, "select * from `contactdetails`");
+$contactdetails = mysqli_fetch_all($result);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,23 +20,26 @@
     <header>
         Olive Nakhaonga
         <nav>
-            <a href="bio.html">Home</a> 
-            <a href="projects.html">Projects</a>
-            <a href="skills.html">Skills</a>
+            <a href="bio.php">Home</a> 
+            <a href="projects.php">Projects</a>
+            <a href="skills.php">Skills</a>
         </nav>
     </header>
 
     <div class="images">
         <img src="images/olive1.jpg"/>
         <img src="nails1.jpg"/>
-        <img src="nails2.jpg"/>
-        <img src="nails3.jpg"/>
+        <a href="pictures.php">click to view more</a>
+
         
 
         <p>These are just some of the projects i've worked on so far, on the first <br>
             picture that is actually a picture i edited using photoshop, and the three <br>
             beautiful pictures are some of my client's hands that i have done.  </p>
 
+            <?php
+            
+            ?>
     </div>
 
     <footer>

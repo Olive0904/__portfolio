@@ -1,3 +1,7 @@
+<?php
+$db = mysqli_connect("localhost","root","","myportfolio");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

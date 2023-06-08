@@ -17,24 +17,25 @@ function stop(){
     clearInterval(interval);
 }
 
-function validate(){
+ document.getElementById('form').addEventListener("submit", (e) => {
     if (document.getElementById('fname').value == null || document.getElementById('fname').value == '') {
         alert("Please enter a name");
-        return false;
+        e.preventDefault();
     }
 
     if (document.getElementById('sname').value == null || document.getElementById('sname').value == '') {
         alert("Please enter a surname");
-        return false;
+        e.preventDefault();
     }
 
     if (document.getElementById('uname').value == null || document.getElementById('uname').value == '') {
         alert("Please enter a username");
-        return false;
+        e.preventDefault();
     }
 
     if (document.getElementById('phone').value == null || document.getElementById('phone').value == '') {
         alert("Please enter a valid phone number");
-        return false;
+        e.preventDefault();
     }
-}
+    
+});
